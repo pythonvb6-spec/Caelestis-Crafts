@@ -287,7 +287,7 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
 
 // ── Mirror side selector ──
 (function () {
-    const PRICES = { noHandle: 65, withHandle: 60 };
+    const PRICES = { noHandle: 60, withHandle: 70 };
 
     function initMirrorSelector() {
         const card = document.getElementById('mirrorCard');
@@ -298,7 +298,7 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
 
         radios.forEach(radio => {
             radio.addEventListener('change', () => {
-                const price = PRICES[radio.value] ?? 65;
+                const price = PRICES[radio.value] ?? 60;
                 priceEl.textContent = '₱' + price;
                 // keep card dataset in sync so modal reads correct price
                 card.dataset.mirrorPrices = price;
